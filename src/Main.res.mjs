@@ -18,18 +18,9 @@ function render(state, root) {
         ", clicked: ",
         " times.\n    </div>"
       ], [
-        {
-          NAME: "Procedure",
-          VAL: onClicked
-        },
-        {
-          NAME: "Str",
-          VAL: state.name
-        },
-        {
-          NAME: "Int",
-          VAL: state.iterations
-        }
+        onClicked,
+        state.name,
+        state.iterations
       ]);
 }
 

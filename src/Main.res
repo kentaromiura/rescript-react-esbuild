@@ -7,8 +7,8 @@ let unref = refState => refState.contents;
 let refRoot = ref(None);
 
 let rec render = (state: State.t, root: Html.hyperTemplate) => {
-    root`<div onclick=${#Procedure(onClicked)}>
-    Hello, ${#Str(state.name)}, clicked: ${#Int(state.iterations)} times.
+    root`<div onclick=${Procedure(onClicked)}>
+    Hello, ${String(state.name)}, clicked: ${Int(state.iterations)} times.
     </div>`;
 } and let dispatch = action => {
     let root = unref(refRoot);
