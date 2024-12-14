@@ -1,0 +1,21 @@
+{
+  "name": "rescript-uhtml",
+  "version": "1.0.0",
+  "description": "rescript + uhtml basic configuration",
+  "main": "out.js",
+  "author": "Cristian Carlesso <@kentaromiura>",
+  "license": "MIT",
+  "dependencies": {
+    "@rescript/core": "1.6.1",
+    "esbuild": "^0.24.0",
+    "rescript": "11.1.4",
+    "uhtml": "^4.7.0"
+  },
+  "scripts": {
+    "build": "yarn rescript && yarn esbuild --bundle src/Main.res.mjs --minify --outfile=out.js",
+    "res:build": "rescript",
+    "res:clean": "rescript clean",
+    "res:dev": "rescript -w",
+    "serve": "npx serve ."
+  }
+}
