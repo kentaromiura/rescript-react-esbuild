@@ -12,15 +12,43 @@ var refRoot = {
 };
 
 function render(state, root) {
+  var test = Html.html([
+        "\n    <div>\n        TEST ",
+        " ",
+        " \n    </div>"
+      ], [
+        {
+          NAME: "Int",
+          VAL: 0
+        },
+        {
+          NAME: "Str",
+          VAL: "ciao"
+        }
+      ]);
   root([
-        "<div onclick=",
-        ">\n    Hello, ",
+        "\n    ",
+        "\n    <div onclick=",
+        ">\n        Hello, ",
         ", clicked: ",
         " times.\n    </div>"
       ], [
-        onClicked,
-        state.name,
-        state.iterations
+        {
+          NAME: "Elements",
+          VAL: [test]
+        },
+        {
+          NAME: "Procedure",
+          VAL: onClicked
+        },
+        {
+          NAME: "Str",
+          VAL: state.name
+        },
+        {
+          NAME: "Int",
+          VAL: state.iterations
+        }
       ]);
 }
 
