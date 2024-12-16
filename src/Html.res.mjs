@@ -10,12 +10,30 @@ function html(prim0, prim1) {
             ]);
 }
 
+function svg(prim0, prim1) {
+  return Caml_splice_call.spliceApply(Html.svg, [
+              prim0,
+              prim1
+            ]);
+}
+
 function getRendererFor(prim) {
   return Html.render(prim);
 }
 
+function styled(prim0, prim1) {
+  return Html.styled(prim0, prim1);
+}
+
+function css(template, _holes) {
+  return template.length.toString();
+}
+
 export {
   html ,
+  svg ,
   getRendererFor ,
+  styled ,
+  css ,
 }
 /* ./html Not a pure module */

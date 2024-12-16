@@ -7,13 +7,15 @@
   "license": "MIT",
   "dependencies": {
     "@babel/core": "^7.26.0",
+    "@emotion/css": "^11.13.5",    
     "@rescript/core": "1.6.1",
     "esbuild": "^0.24.0",
+    "esbuild-plugin-babel": "^0.2.3",
     "rescript": "11.1.4",
     "uhtml": "^4.7.0"
   },
   "scripts": {
-    "build": "yarn rescript && yarn esbuild --bundle src/Main.res.mjs --minify --outfile=out.js && node transform",
+    "build": "yarn rescript && NODE_ENV=production node build.mjs",
     "res:build": "rescript",
     "res:clean": "rescript clean",
     "res:dev": "rescript -w",
