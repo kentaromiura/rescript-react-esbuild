@@ -1,5 +1,5 @@
 {
-  "name": "rescript-uhtml",
+  "name": "rescript-react-esbuild",
   "sources": {
     "dir": "src",
     "subdirs": true
@@ -10,9 +10,14 @@
   },
   "suffix": ".res.mjs",
   "bs-dependencies": [
-    "@rescript/core"
+    "@rescript/core",
+    "@rescript/react",
+    "@fattafatta/rescript-jotai"
   ],
   "bsc-flags": [
     "-open RescriptCore"
-  ]
+  ],
+  "jsx": {
+    "version": 4
+  }
 }
