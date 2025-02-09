@@ -1,5 +1,10 @@
 {
     "sourceMaps": "inline",
-    "plugins": ["./babel.transform.extractStyles"]
+    "plugins": ["./babel.transform.extractStyles"],
+    "env": {
+      "production" : {
+        "compact": false
+      }
+    }
 }
 

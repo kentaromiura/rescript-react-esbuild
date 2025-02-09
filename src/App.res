@@ -16,17 +16,6 @@ let make = () => {
             {React.string(`Clicked ${count->Int.toString} times`)}
         </Button>
     </div>
-    <footer className={Html.css`
-    background-color: rgb(20, 22, 44);
-    color: rgb(36, 37, 56);
-    min-height: 50px;
-    position: relative;
-`}><img className={Html.css`
-    position: absolute;
-    top: 0;
-    left: 0px;
-    height: 52px;
-    z-index: 12;
-    width: auto;`} src="logo-index.png" /></footer>
+    <Footer />
     </>
 }

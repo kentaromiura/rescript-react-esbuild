@@ -5,7 +5,12 @@ import * as Util from "./Util.res.mjs";
 import * as Caml_obj from "rescript/lib/es6/caml_obj.js";
 import * as JsxRuntime from "react/jsx-runtime";
 
-var pink = Html.css(["\n&:hover {\n    color: mistyrose;\n}"], []);
+var pinkColor = "mistyrose";
+
+var pink = Html.css([
+      "\n&:hover {\n    color: ",
+      ";\n}"
+    ], [pinkColor]);
 
 function make(props) {
   var newrecord = Caml_obj.obj_dup(props);
@@ -16,6 +21,7 @@ function make(props) {
 }
 
 export {
+  pinkColor ,
   pink ,
   make ,
 }

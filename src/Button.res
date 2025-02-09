@@ -1,8 +1,8 @@
 open Util
-
+let pinkColor = "mistyrose";
 let pink = Html.css`
 &:hover {
-    color: mistyrose;
+    color: ${pinkColor};
 }`
 
 let make = props => 

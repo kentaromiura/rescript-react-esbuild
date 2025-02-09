@@ -4,6 +4,7 @@ import * as Html from "./Html.res.mjs";
 import * as State from "./State.res.mjs";
 import * as Jotai from "jotai";
 import * as Button from "./Button.res.mjs";
+import * as Footer from "./Footer.res.mjs";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as JsxRuntime from "react/jsx-runtime";
 
@@ -32,13 +33,7 @@ function App(props) {
                       ],
                       className: Html.css(["background-color: #f3f4f6;padding:20px"], [])
                     }),
-                JsxRuntime.jsx("footer", {
-                      children: JsxRuntime.jsx("img", {
-                            className: Html.css(["\n    position: absolute;\n    top: 0;\n    left: 0px;\n    height: 52px;\n    z-index: 12;\n    width: auto;"], []),
-                            src: "logo-index.png"
-                          }),
-                      className: Html.css(["\n    background-color: rgb(20, 22, 44);\n    color: rgb(36, 37, 56);\n    min-height: 50px;\n    position: relative;\n"], [])
-                    })
+                JsxRuntime.jsx(Footer.make, {})
               ]
             });
 }
