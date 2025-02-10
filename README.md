@@ -4,7 +4,7 @@ The example app shows a basic setup, with Jotai as store + re-render on changes.
 
 Bonus:
 ===
-- emotion can be used too! `Html.css` styles will be processed by emotion and extracted to `out.css`. Note: don't alias `Html.css` use it as extended.
+- emotion can be used too! `Html.css` styles will be processed by emotion and extracted to `out.css`. Note: don't alias `Html.css` use it in its extended form.
 
 
 - `styled` like API (a little more verbose):
