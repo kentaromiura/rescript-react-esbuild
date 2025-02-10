@@ -9,18 +9,20 @@ Bonus:
 
 - `styled` like API (a little more verbose):
     - for a dom element:
-```javascript
-styled(Dom("h1"), Html.css`
-    font-weight:500;
-`)
-```
+        ```javascript
+        styled(Dom("h1"), Html.css`
+            font-weight:500;
+        `)
+        ```
+
     - to extend a React.Component (or a previously styled component):
-```javascript
-module RedWhatsThis = {
-    let make = 
-        styled(Component(WhatsThis.make), Html.css`color:red`)
-}
-```
+
+        ```javascript
+        module RedWhatsThis = {
+            let make = 
+                styled(Component(WhatsThis.make), Html.css`color:red`)
+        }
+        ```
 
 
 Why?
