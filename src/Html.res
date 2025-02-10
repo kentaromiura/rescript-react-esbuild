@@ -12,9 +12,7 @@ let cx = (classes: array<string>): string => Array.join(classes, " ")
 })
 
 type stylable<'props> = Component(React.component<'props>) | Dom(string)
-let styled = (what: stylable<'props>, className) => 
-@react.component
-(props: JsxDOM.domProps) => {    
+let styled = (what: stylable<'props>, className) => (props: JsxDOM.domProps) => {    
     switch what {
         | Component(c) => {
             let cn = props.className;

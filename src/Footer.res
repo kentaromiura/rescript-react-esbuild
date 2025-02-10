@@ -15,6 +15,7 @@ let logoStyle = Html.css`
     width: auto;
     transition: left 0.5s ease`
 
+// Example of using jotai to move the pheasant
 @react.component
 let make = () => {
     let (count, _setCount) = Jotai.Atom.useAtom(State.counter)

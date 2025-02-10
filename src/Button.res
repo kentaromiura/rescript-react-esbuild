@@ -1,5 +1,6 @@
 
 let pinkColor = "mistyrose";
+// Example of css interpolation outside of component
 let pink = Html.css`
 &:hover {
     color: ${pinkColor};
