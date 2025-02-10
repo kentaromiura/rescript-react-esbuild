@@ -3,13 +3,12 @@ let styled = Html.styled
 
 // Example of styled components:
 module WhatsThis = {
-    let make = (props) => styled(Dom("h1"), Html.css`
+    let make = styled(Dom("h1"), Html.css`
     font-weight:500;
-`)(props)
+`)
 }
 module RedWhatsThis = {
-    let make = (props) => 
-        styled(Component(WhatsThis.make), Html.css`color:red`)(props)
+    let make = styled(Component(WhatsThis.make), Html.css`color:red`)
 }
 
 @react.component

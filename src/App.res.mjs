@@ -8,23 +8,19 @@ import * as Footer from "./Footer.res.mjs";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as JsxRuntime from "react/jsx-runtime";
 
-function make(props) {
-  return Html.styled({
-                TAG: "Dom",
-                _0: "h1"
-              }, Html.css(["\n    font-weight:500;\n"], []))(props);
-}
+var make = Html.styled({
+      TAG: "Dom",
+      _0: "h1"
+    }, Html.css(["\n    font-weight:500;\n"], []));
 
 var WhatsThis = {
   make: make
 };
 
-function make$1(props) {
-  return Html.styled({
-                TAG: "Component",
-                _0: make
-              }, Html.css(["color:red"], []))(props);
-}
+var make$1 = Html.styled({
+      TAG: "Component",
+      _0: make
+    }, Html.css(["color:red"], []));
 
 var RedWhatsThis = {
   make: make$1
@@ -69,4 +65,4 @@ export {
   RedWhatsThis ,
   make$2 as make,
 }
-/* Html Not a pure module */
+/* make Not a pure module */
