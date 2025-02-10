@@ -20,7 +20,7 @@ let make = () => {
     let (count, _setCount) = Jotai.Atom.useAtom(State.counter)
     <footer className={footerStyle}>
         <img className={
-            Util.cx([
+            Html.cx([
                 logoStyle, 
                 Html.css`left: ${(count * 15)->Int.toString}px`
             ])} src="logo-index.png" />

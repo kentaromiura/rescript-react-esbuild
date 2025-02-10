@@ -8,6 +8,28 @@ import * as Footer from "./Footer.res.mjs";
 import * as Caml_option from "rescript/lib/es6/caml_option.js";
 import * as JsxRuntime from "react/jsx-runtime";
 
+function make(props) {
+  return Html.styled({
+                TAG: "Dom",
+                _0: "h1"
+              }, Html.css(["\n    font-weight:500;\n"], []))(props);
+}
+
+var WhatsThis = {
+  make: make
+};
+
+function make$1(props) {
+  return Html.styled({
+                TAG: "Component",
+                _0: make
+              }, Html.css(["color:red"], []))(props);
+}
+
+var RedWhatsThis = {
+  make: make$1
+};
+
 function App(props) {
   var match = Jotai.useAtom(State.counter);
   var setCount = match[1];
@@ -15,9 +37,8 @@ function App(props) {
               children: [
                 JsxRuntime.jsxs("div", {
                       children: [
-                        JsxRuntime.jsx("h1", {
-                              children: "What is this about",
-                              className: Html.css(["font-weight:500"], [])
+                        JsxRuntime.jsx(make$1, {
+                              children: "What is this about"
                             }),
                         JsxRuntime.jsx("p", {
                               children: "This is a simple template for an ESBuild project using Rescript, Emotion CSS and Jotai."
@@ -38,9 +59,14 @@ function App(props) {
             });
 }
 
-var make = App;
+var styled = Html.styled;
+
+var make$2 = App;
 
 export {
-  make ,
+  styled ,
+  WhatsThis ,
+  RedWhatsThis ,
+  make$2 as make,
 }
-/* State Not a pure module */
+/* Html Not a pure module */

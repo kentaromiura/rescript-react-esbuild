@@ -1,4 +1,16 @@
 open State
+let styled = Html.styled
+
+// Example of styled components:
+module WhatsThis = {
+    let make = (props) => styled(Dom("h1"), Html.css`
+    font-weight:500;
+`)(props)
+}
+module RedWhatsThis = {
+    let make = (props) => 
+        styled(Component(WhatsThis.make), Html.css`color:red`)(props)
+}
 
 @react.component
 let make = () => {
@@ -6,9 +18,9 @@ let make = () => {
     
     <>
     <div className={Html.css`background-color: #f3f4f6;padding:20px`}>
-        <h1 className={Html.css`font-weight:500`}>
+        <RedWhatsThis>
             {"What is this about"->React.string}
-        </h1>
+        </RedWhatsThis>
         <p>
             {React.string("This is a simple template for an ESBuild project using Rescript, Emotion CSS and Jotai.")}
         </p>
