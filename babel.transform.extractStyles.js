@@ -93,8 +93,11 @@ module.exports = function (babel) {
                   NAME: `"--kentacss${uniqueId}-${i}"`
                 });
               	 
-	             
-				        p.parentPath.pushContainer('body',statement)                
+	              if (["FunctionDeclaration", "BlockStatement"].includes(p.parentPath.node.type)) {
+                  p.parentPath.unshiftContainer('body',statement)
+                } else {
+				          p.parentPath.pushContainer('body',statement)
+                }
               }
               );
               
