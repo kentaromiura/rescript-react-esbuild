@@ -37,7 +37,7 @@ function make$2(props) {
               }, Html.css([
                     "\n        color:",
                     ";\n        transition: color 4.5s\n    "
-                  ], [props.color]))(Html.unsafeDrillProps(props));
+                  ], [props.color]))(props);
 }
 
 var ColoredWhatsThis = {

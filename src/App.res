@@ -15,7 +15,7 @@ module ColoredWhatsThis = {
     let make = props => styled(Component(WhatsThis.make), Html.css`
         color:${props.color};
         transition: color 4.5s
-    `)(Html.unsafeDrillProps(props))
+    `)(props :> JsxDOM.domProps)
 }
 
 @react.component

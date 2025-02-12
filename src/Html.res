@@ -24,6 +24,3 @@ let styled = (what: stylable<'props>, className) => (props: JsxDOM.domProps) => 
         }
     }    
 }
-
-// For when props is {...JsxDom.domProps, otherProps} and you need to pass it down.
-let unsafeDrillProps = (_p: 'a): JsxDOM.domProps => %raw("_p");

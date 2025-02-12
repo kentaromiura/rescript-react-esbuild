@@ -32,14 +32,9 @@ function styled(what, className) {
   };
 }
 
-function unsafeDrillProps(_p) {
-  return _p;
-}
-
 export {
   css ,
   cx ,
   styled ,
-  unsafeDrillProps ,
 }
 /* react Not a pure module */
