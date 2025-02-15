@@ -1,9 +1,11 @@
 
 let footerStyle = Html.css`
     background-color: rgb(20, 22, 44);
-    color: rgb(36, 37, 56);
+    color: white;
     min-height: 50px;
-    position: relative;
+    position: absolute;
+    bottom:0;
+    width:100%;
 `
 
 let logoStyle = Html.css`
@@ -20,11 +22,11 @@ let logoStyle = Html.css`
 let make = () => {
     let (count, _setCount) = Jotai.Atom.useAtom(State.counter)
     <footer className={footerStyle}>
-        <img className={
+        <img alt="logo figuring a pheasant" className={
             Html.cx([
                 logoStyle, 
                 Html.css`left: ${(count * 15)->Int.toString}px`
-            ])} src="logo-index.png" />
+            ])} src="assets/logo-index.avif" />
     </footer>
 }
     

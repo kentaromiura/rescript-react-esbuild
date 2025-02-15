@@ -35,3 +35,11 @@ I forked my Rescript + Uhtml project and converted it to use React
 Notes:
 I would've used https://github.com/davesnx/styled-ppx but it can't yet be used with Rescript v11 (also mac M1 are not supported even in v10 unless you compile locally and modify the postinstall script).
 Style are handled on JS build phase side, therefore there's no strong type for css; although it's fine for my usage.
+
+This branch uses a custom actix web server, so you'll need rust installed.
+The main branch uses npx serve + livereload to do pretty much the same thing.
+
+BTW:
+![lighthouse score of example app](assets/lighthouse.png)
+
+

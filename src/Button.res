@@ -8,5 +8,5 @@ let pink = Html.css`
 
 let make = props => 
     <button {...props}
-        className={Html.cx([pink, Html.css`background-color:#2563EB;`])}
+        className={Html.cx([pink, Html.css`background-color:#7ea6fb;`])}
     />

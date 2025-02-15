@@ -5,7 +5,7 @@ import * as State from "./State.res.mjs";
 import * as Jotai from "jotai";
 import * as JsxRuntime from "react/jsx-runtime";
 
-var footerStyle = Html.css(["\n    background-color: rgb(20, 22, 44);\n    color: rgb(36, 37, 56);\n    min-height: 50px;\n    position: relative;\n"], []);
+var footerStyle = Html.css(["\n    background-color: rgb(20, 22, 44);\n    color: white;\n    min-height: 50px;\n    position: absolute;\n    bottom:0;\n    width:100%;\n"], []);
 
 var logoStyle = Html.css(["\n    position: absolute;\n    top: 0;\n    left: 0px;\n    height: 52px;\n    z-index: 12;\n    width: auto;\n    transition: left 0.5s ease"], []);
 
@@ -20,7 +20,8 @@ function Footer(props) {
                                 "px"
                               ], [Math.imul(match[0], 15).toString()])
                         ]),
-                    src: "logo-index.png"
+                    alt: "logo figuring a pheasant",
+                    src: "assets/logo-index.avif"
                   }),
               className: footerStyle
             });

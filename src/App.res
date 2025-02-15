@@ -21,9 +21,12 @@ module ColoredWhatsThis = {
 @react.component
 let make = () => {
     let (count, setCount) = Jotai.Atom.useAtom(counter)
-    let color = count > 2 ? "purple" : "lightsteelblue";
+    let color = count > 2 ? "purple" : "#1f5fb2";
     <>
-        <div className={Html.css`background-color: #f3f4f6;padding:20px`}>            
+        <div className={Html.css`
+        background-color: #f3f4f6;
+        padding:20px;
+        height: calc(100% - 90px);`}>            
             <RedWhatsThis>
                 {"What is this about"->str}
             </RedWhatsThis>

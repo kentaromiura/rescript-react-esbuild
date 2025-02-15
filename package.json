@@ -8,27 +8,28 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@emotion/css": "^11.13.5",
+    "elements": "^0.6.0",
     "esbuild": "^0.24.0",
     "esbuild-plugin-babel": "^0.2.3",
-    "livereload": "^0.9.3",
+    "jsdom": "^26.0.0",
     "nodemon": "^3.1.9"
   },
   "dependencies": {
     "@fattafatta/rescript-jotai": "^0.4.2",
     "@rescript/core": "1.6.1",
     "@rescript/react": "^0.12.1",
+    "clean-css": "^5.3.3",
     "jotai": "^2.11.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "rescript": "11.1.4"
   },
   "scripts": {
-    "build": "yarn rescript && NODE_ENV=production node build.mjs",
+    "build": "yarn rescript && NODE_ENV=production node build.mjs && node package-index.js>index.one.html",
     "res:build": "rescript",
     "res:clean": "rescript clean",
     "res:dev": "rescript -w",
-    "serve": "npx serve .",
-    "liverel": "livereload 'out.js,out.css,index.html'",
-    "dev": "yarn liverel&yarn serve&nodemon --ext res --watch ./src --exec \"yarn build\""
+    "serve": "(cd server; cargo run)", 
+    "dev": "yarn serve&nodemon --ext res --watch ./src --exec \"yarn build\""
   }
 }

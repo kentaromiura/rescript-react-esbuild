@@ -48,7 +48,7 @@ function App(props) {
   var match = Jotai.useAtom(State.counter);
   var setCount = match[1];
   var count = match[0];
-  var color = count > 2 ? "purple" : "lightsteelblue";
+  var color = count > 2 ? "purple" : "#1f5fb2";
   return JsxRuntime.jsxs(JsxRuntime.Fragment, {
               children: [
                 JsxRuntime.jsxs("div", {
@@ -72,7 +72,7 @@ function App(props) {
                                 })
                             })
                       ],
-                      className: Html.css(["background-color: #f3f4f6;padding:20px"], [])
+                      className: Html.css(["\n        background-color: #f3f4f6;\n        padding:20px;\n        height: calc(100% - 90px);"], [])
                     }),
                 JsxRuntime.jsx(Footer.make, {})
               ]

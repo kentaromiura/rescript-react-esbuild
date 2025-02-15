@@ -15,7 +15,7 @@ function make(props) {
   var newrecord = Caml_obj.obj_dup(props);
   return JsxRuntime.jsx("button", (newrecord.className = Html.cx([
                     pink,
-                    Html.css(["background-color:#2563EB;"], [])
+                    Html.css(["background-color:#7ea6fb;"], [])
                   ]), newrecord));
 }
 
